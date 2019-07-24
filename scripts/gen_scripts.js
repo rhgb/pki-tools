@@ -7,8 +7,10 @@ if (process.argv[2]) {
 const config = require(configPath);
 
 function run() {
+    console.log(`#!/bin/bash\nPATH=${__dirname}:$PATH`);
     console.log('\n# Prepare directories');
-    console.log('prepare_ca_dir.sh');
+    console.log(`prepare_ca_dir.sh`);
+
     console.log('cd ca');
     console.log('\n# Generate Root CA');
     console.log(`gen_root_ca.sh "${config.commonSubject}" "${config.rootCommonName}"`);
@@ -22,6 +24,8 @@ function run() {
             console.log(`gen_cert.sh "${config.commonSubject}" ${identity.type} ${authority.id} "${identity.name}" ${identity.id}`);
         }
     }
+
+    console.log(`cd ${process.cwd()}`);
 }
 
 run();

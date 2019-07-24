@@ -6,8 +6,8 @@
       "id": "web_service",
       "name": "Example Web Service CA",
       "identities": [
-        {"type": "server", "id": "gibbon_service", "name": "Example Web Service"},
-        {"type": "client", "id": "gibbon_server", "name": "Example SSL Client"}
+        {"type": "server", "id": "demo_service", "name": "Example Web Service"},
+        {"type": "client", "id": "demo_client", "name": "Example SSL Client"}
       ]
     }
   ]
