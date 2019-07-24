@@ -1,0 +1,14 @@
+{
+  "commonSubject": "/C=CN/ST=Shanghai/L=Shanghai/O=Example.com",
+  "rootCommonName": "Example Root Certificate",
+  "authorities": [
+    {
+      "id": "web_service",
+      "name": "Example Web Service CA",
+      "identities": [
+        {"type": "server", "id": "gibbon_service", "name": "Example Web Service"},
+        {"type": "client", "id": "gibbon_server", "name": "Example SSL Client"}
+      ]
+    }
+  ]
+}
