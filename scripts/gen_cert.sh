@@ -19,6 +19,7 @@ openssl req \
     -config intermediate/openssl.cnf \
     -key intermediate/private/${IDENT}.key.pem \
     -subj "${SUBJECT}/CN=${COMMON_NAME}" \
+    -addext "subjectAltName = DNS:${COMMON_NAME}" \
     -new -sha256 -out intermediate/csr/${IDENT}.csr.pem
 
 openssl ca -config intermediate/openssl.cnf \
